@@ -128,6 +128,7 @@ button:hover {
   margin-right: 30px;
   font-size: 1.2em;
   position: relative;
+  margin-bottom: 50px;
 
 }
 .logo-login img{
@@ -187,6 +188,38 @@ button:hover {
   height: 52px;
   background: transparent;
   padding: 0 5px;
+}
+
+/* mostrar ou ocultar senha icone*/
+
+.input-chk{
+  position: absolute;
+  right:15px;
+  top: 20px;
+  cursor: pointer;
+}
+.input-chk input{
+  display: none;
+}
+.input-chk img{
+  opacity: 50%;
+}
+.input-chk #vis{
+  height:15px;
+  position: absolute;
+  right:5px;
+}
+.input-chk #nvis{
+  height:19px;
+  visibility: hidden;
+  position: absolute;
+  right:5px;
+}
+.input-chk input:checked + #vis{
+  visibility: hidden;
+}
+.input-chk input:checked + #vis + #nvis{
+  visibility:visible;
 }
 
 .focus-input-form {
