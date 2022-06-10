@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="./javascript/scripts.js"></script>
+
 </head>
 <body>
 	
@@ -21,7 +23,7 @@
 			</div>
 			
 			<div class="wrap-login">			
-				<form class="login-form">
+				<form class="login-form" method="post">
 					<span class="login-form-title">
 						Acesse aqui
 					</span>
@@ -32,11 +34,11 @@
 					</div>
 
 					<div class="wrap-input margin-bottom-35">
-						<input class="input-form" type="password" name="password" id="password">			
+						<input class="input-form" type="password" name="password" id="senha">			
 						<span class="focus-input-form" data-placeholder="Senha"></span>
 
 						<label class="input-chk">
-							<input  type="checkbox">
+							<input  type="checkbox" onclick="mostrarSenha()">
 							<img id="vis" src="./images/visivel-100.png" alt="visivel">
 							<img id="nvis" src="./images/nvisivel-100.png" alt="">
 						</label>
@@ -76,16 +78,15 @@
 	
 	<script>
 		let inputs = document.getElementsByClassName('input-form');
-		for (let input of inputs) {
-			input.addEventListener("blur", function() {
+		for (let input of inputs){
+			input.addEventListener("blur",function() {
 				if(input.value.trim() != ""){
 					input.classList.add("has-val");
 				} else {
 					input.classList.remove("has-val");
 				}
 			});
-		}
+		}	
 	</script>
-
 </body>
 </html>
