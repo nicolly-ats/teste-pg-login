@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LN51 Boost</title>
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="/images/LN51.ico" type="image/x-icon">
+	<title>Login | LN51 Boost</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <header class="main-header">
-        <a href="index.html" class="main-header-link imagem-link">
-            <img src="img/LN51-150.png" alt="logo">
-        </a>
-        <h1 class="main-header-title">
-            Painel Otimizador               
-        </h1>
-        <p>Site oficial do LN51 Boost, <br>
-            Entre e saiba mais sobre o painel.</p>
-    </header>
-    <main class="main-content">
-        <div class="login-us">
-            <h2>Acesso para usuário</h2>
-            <a href="./index-us.html" class="button-default">Login de usuário</a>
-        </div>
-        <div class="login-adm">
-            <h2>Acesso para administrador</h2>
-            <a href="#" class="button-default">Login de administrador</a>
-        </div>
-    </main>
-    <footer class="main-footer">
-        <ul class="copyright">
-            <p>© LN51 Boost</p>
-        </ul>        
-    </footer>
+	
+	<div class="container">
+		<div class="container-login">
+			<div class="logo-login">
+				<img src="images/LN51-300.png" class="margin-left-50" />
+				<h1>Painel Otimizador</h1>
+				<br>
+				<p>Bem-vindo ao site oficial<br>Acesse já a sua conta</p>
+				<footer class="copyright">&copy; LN51 Boost</footer>
+			</div>
+			
+			<div class="wrap-login">			
+				<form class="login-form">
+					<span class="login-form-title">
+						Acesse aqui
+					</span>
+
+					<div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="email" autocomplete="off">
+						<span class="focus-input-form" data-placeholder="E-mail"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="password" name="password">
+						<span class="focus-input-form" data-placeholder="Senha"></span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<button class="login-form-btn">
+							Login
+						</button>
+					</div>
+
+					<ul class="login-utils">
+						<li class="margin-bottom-8 margin-top-8">
+							<span class="text1">
+								Esqueceu sua
+							</span>
+
+							<a href="#" class="text2">
+								senha?
+							</a>
+						</li>
+
+						<li>
+							<span class="text1">
+								Não tem conta?
+							</span>
+
+							<a href="#" class="text2">
+								Criar
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script>
+
 </body>
 </html>
