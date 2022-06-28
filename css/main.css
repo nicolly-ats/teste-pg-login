@@ -50,6 +50,7 @@
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+  background:black;
 }
 
 ul, li {
@@ -111,11 +112,10 @@ button:hover {
 .container {
   width: 100%;
   margin: 0 auto;
+  
 }
 
 .container-login {
-  width: 100%;  
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -162,7 +162,7 @@ button:hover {
 .login-form-title {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 39px;
+  font-size: 35px;
   color: var(--highligth-text);
   line-height: 1.2;
   text-align: center;

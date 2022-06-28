@@ -8,3 +8,11 @@ function mostrarSenha(){
 		}
 }
 /*-------------------------------------------------*/
+function ocultarSenha(){
+	var tipo = document.getElementById("senhaConf");
+	if(tipo.type == "password"){
+    	tipo.type = "text";
+		}else{
+		tipo.type = "password";
+		}
+}

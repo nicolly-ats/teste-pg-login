@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<title>Cadastrar | LN51 Boost</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/pgcadastro.css">
+	<script type="text/javascript" src="./javascript/scripts.js"></script>
+	<script type="text/javascript">
+		function validaSenha(){
+			var senha = document.getElementById("senha").value;
+			var senhaConf = document.getElementById("senhaConf").value;
+
+			if(senha == senhaConf){
+				document.getElementById("alerta").innerHTML = "As senhas são iguais"
+			}
+			else{
+				document.getElementById("alerta").innerHTML = "As senhas não correspondem"
+			}
+		}
+	</script>
+
+</head>
+<body>
+	
+	<div class="container">
+		<div class="container-login">
+			<div class="logo-login">
+				<img src="images/LN51-300.png" class="margin-left-50" />
+				<h1>Painel Otimizador</h1>
+				<br>
+				<p>Bem-vindo ao site oficial<hr style="margin: 15px 0;">Você foi redirecionado à página de cadastro<br>Clique <a href="./index.html">aqui</a> para voltar.
+                </p>
+				<footer class="copyright">&copy; LN51 Boost</footer>
+			</div>
+			
+			<div class="wrap-login">			
+				<form class="login-form" method="post">
+					<span class="login-form-title">
+						Crie sua conta
+					</span>
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="name" id="name" autocomplete="off" required>
+						<span class="focus-input-form" data-placeholder="Digite seu nome"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="email" name="email" id="email" autocomplete="off" required>
+						<span class="focus-input-form" data-placeholder="Digite um email"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="password" name="password" id="senha" required>			
+						<span class="focus-input-form" data-placeholder="Crie uma senha"></span>
+
+						<label class="input-chk">
+							<input  type="checkbox" onclick="mostrarSenha()">
+							<img id="vis" src="./images/visivel-100.png" alt="visivel">
+							<img id="nvis" src="./images/nvisivel-100.png" alt="">
+						</label>
+					</div>
+                    <div class="wrap-input margin-bottom-35">
+						<input onkeyup="validaSenha()" class="input-form" type="password" name="password2" id="senhaConf" required>			
+						<span class="focus-input-form" data-placeholder="Confirmar senha"></span>
+
+						<label class="input-chk">  
+							<input  type="checkbox" onclick="ocultarSenha()">
+							<img id="vis" src="./images/visivel-100.png" alt="visivel">
+							<img id="nvis" src="./images/nvisivel-100.png" alt="">
+						</label>
+					</div>
+					<div id ="alerta">
+						<p></p>
+					</div>
+
+					<div class="container-login-form-btn">
+						<button class="login-form-btn">
+							Cadastrar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs){
+			input.addEventListener("blur",function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}	
+	</script>
+</body>
+</html>
